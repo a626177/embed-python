@@ -1,0 +1,42 @@
+<%- include("sub-parts/header") -%>
+
+
+<main role="main">
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Upload your data!</h1>
+      <p>Drag you data to the space below. (or paste the link over here)</p>
+      <form action="/" class="form-upload" method="post">
+        <input type="text" name="datalink" class="upload-link" placeholder="Paste your link here..." required>
+        <button class="btn btn-md btn-primary btn-block upload-btn" type="submit">Upload</button>
+        <p class="comment">(Not finished yet)<p>
+      </form>
+    </div>
+  </div>
+
+  <div class="container upload-space">
+    <!-- upload form -->
+    <form action="/file-upload" method="post" class="dropzone dz-clickable" id="myDrop" enctype="multipart/form-data">
+      <div class="fallback">
+        <input name="file" type="file" multiple/>
+      </div>
+      <input type="submit" id="submit-form" style="display:none"/>
+      <button type="button" id="cancel-upload" style="display:none"data-dz-remove></button>
+    </form>
+    <table class="upload-tb">
+      <tr>
+        <th>
+          <label for="submit-form" tabindex="0" class="btn btn-md btn-primary btn-block upload-btn" onclick="cancelUpload()">Upload</label>
+        </th>
+        <th>
+          <label for="cancel-upload" class="btn btn-md btn-primary btn-block cancel-btn" >Cancel</label>
+        </th>
+      </tr>
+    </table>
+
+
+  </div> <!-- /container -->
+
+</main>
+<%- include("sub-parts/footer") -%>

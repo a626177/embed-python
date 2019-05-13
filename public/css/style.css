@@ -1,0 +1,61 @@
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.home-heightlight {
+    font-size: 1.5rem;
+    color: #8f71ff;
+}
+
+.form-upload {
+  width: 100%;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.upload-link {
+  position: relative;
+  width: 30%;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px ;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.upload-btn {
+  width: 90px;
+}
+.cancel-btn {
+  width: 90px;
+  color: black;
+  border-color: grey;
+  background-color: grey;
+}
+.cancel-btn:hover {
+  width: 90px;
+  color: white;
+  border-color: grey;
+  background-color: grey;
+}
+
+.comment {
+  color: red;
+}
+
+.upload-tb ul li{
+  width:50%;
+  align:center;
+}

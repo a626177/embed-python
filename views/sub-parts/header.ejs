@@ -1,0 +1,82 @@
+onclick="cancelUpload()"<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="generator" content="Jekyll v3.8.5">
+  <title>Data Analysis System</title>
+  <link rel="canonical" href="">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/dropzone.css" rel="stylesheet">
+  <!--<link href="jumbotron.css" rel="stylesheet"> -->
+  <script src="ejs.min.js"></script>
+  <script src="dropzone.js"></script>
+  <script src="upload.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" id = "nav-home">
+          <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" id = "nav-upload">
+          <a class="nav-link" href="upload">Upload data</a>
+        </li>
+        <li class="nav-item"  id = "nav-manage">
+          <a class="nav-link" href="manage">Manage data</a>
+        </li>
+        <li class="nav-item"  id = "nav-analysis">
+          <a class="nav-link" href="analysis">Analysis</a>
+        </li>
+        <!--dropdown menu-->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" href="/">Action</a>
+            <a class="dropdown-item" href="/">Another action</a>
+            <a class="dropdown-item" href="/">Something else here</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+    <% if(pageTitle == "home"){ %>
+      <script>
+           var element = document.getElementById("nav-home");
+           element.classList.add("active");
+      </script>
+    <% }else if(pageTitle == "upload"){ %>
+      <script>
+           var element = document.getElementById("nav-upload");
+           element.classList.add("active");
+      </script>
+    <% }else if(pageTitle == "manage"){ %>
+        <script>
+             var element = document.getElementById("nav-manage");
+             element.classList.add("active");
+        </script>
+    <% }else if(pageTitle == "analysis"){ %>
+        <script>
+             var element = document.getElementById("nav-analysis");
+              element.classList.add("active");
+        </script>
+
+    <% } %>
+
+<!-- Orgnize header by jQuery -->
+  </nav>
